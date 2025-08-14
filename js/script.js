@@ -1,8 +1,15 @@
-// Gera automaticamente a lista de imagens de 1 até 199
+// Gera a lista de imagens
 const imagens = [];
 for (let i = 1; i <= 199; i++) {
   imagens.push(`foto (${i}).jpeg`);
 }
+
+// Ordena numericamente
+imagens.sort((a, b) => {
+  const numA = parseInt(a.match(/\d+/)[0]);
+  const numB = parseInt(b.match(/\d+/)[0]);
+  return numA - numB;
+});
 
 const thumbsContainer = document.getElementById("thumbs");
 const mainImage = document.getElementById("mainImage");
@@ -25,4 +32,3 @@ imagens.forEach((img, index) => {
     mostrarImagem(img);
   }
 });
-
