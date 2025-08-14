@@ -1,0 +1,23 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.thumbnails {
+  max-height: 90vh;
+}
+
+.thumbnails img {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#mainImage {
+  max-height: 90vh;
+  object-fit: contain;
+}
